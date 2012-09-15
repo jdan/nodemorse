@@ -10,6 +10,7 @@ serve = (res, file) ->
     fd.pipe res
 
 exports.route = (res) ->
-  '/': root(res)
+  '/': serve(res, 'views/index.html')
   '/favicon.ico': -> res.end ''
   '/js/main.js': serve(res, 'js/main.js')
+  '/css/style.css': serve(res, 'css/style.css')

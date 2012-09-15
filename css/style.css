@@ -1,0 +1,25 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  background-color: #25b;
+  color: #fff;
+}
+
+body.active {
+  background-color: #2b5;
+}
+
+#trigger {
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: #47c;
+  border: 2px solid black;
+}
+
+#trigger:hover {
+  background-color: #58d;
+  cursor: pointer;
+}
