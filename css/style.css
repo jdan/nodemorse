@@ -23,3 +23,7 @@ body.active {
   background-color: #58d;
   cursor: pointer;
 }
+
+#trigger:active {
+  background-color: #36b;
+}
