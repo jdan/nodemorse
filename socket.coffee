@@ -10,8 +10,8 @@ exports.config = (app) ->
 
     client.on 'on', (data) ->
       client.get 'room', (err, room) ->
-        io.sockets.in(room).emit 'on'
+        client.broadcast.to(room).emit 'on'
 
     client.on 'off', (data) ->
       client.get 'room', (err, room) ->
-        io.sockets.in(room).emit 'off'
+        client.broadcast.to(room).emit 'off'
