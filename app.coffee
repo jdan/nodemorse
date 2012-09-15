@@ -9,7 +9,11 @@ app = http.createServer (req, res) ->
   res.writeHead 200
   path = url.parse(req.url).pathname
 
-  router.route(res)[path]()
+  if f = router.route(res)[path]
+    f()
+  else
+    res.end ''
+
 .listen 3000
 
 socket.config app
